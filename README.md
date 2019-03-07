@@ -1,4 +1,4 @@
-# Simple Ethereum blockchain interation
+# Simple Ethereum blockchain interaction
 With this repository i'm aiming to understand how to interact with the ethereum Blockchain. Using the testnest, I will be using and listing every resources I'm using to help you to do the same.
 
 # Launch the project
