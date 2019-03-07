@@ -3,25 +3,29 @@ import { createMuiTheme, createGenerateClassName } from '@material-ui/core/style
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 
-// A theme with custom primary and secondary color.
-// It's optional.
-const theme = createMuiTheme({
+// Custom style
+// https://material.io/tools/color/#!/?view.left=0&view.right=1&primary.color=78e2a9&secondary.color=ffe664&primary.text.color=3d3d3d&secondary.text.color=a8a8a8
+const custom = {
   palette: {
     primary: {
-      light: purple[300],
-      main: purple[500],
-      dark: purple[700],
+      light: "#abffdb",
+      main: "#78e2a9",
+      dark: "#44af7a",
     },
     secondary: {
-      light: green[300],
-      main: green[500],
-      dark: green[700],
+      light: "#ffff96",
+      main: "#ffe664",
+      dark: "#c9b432",
     },
   },
   typography: {
     useNextVariants: true,
   },
-});
+}
+
+// A theme with custom primary and secondary color.
+// It's optional.
+const theme = createMuiTheme(custom);
 
 function createPageContext() {
   return {
