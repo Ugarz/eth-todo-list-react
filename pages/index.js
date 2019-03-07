@@ -14,7 +14,11 @@ import Link from 'next/link';
 import isEmpty from 'lodash/isEmpty';
 
 import web3 from '../src/helpers/web3'
+
+// Components
 import Nav from '../components/Nav'
+import Basic from '../components/Layouts/Basic'
+import Panels from '../components/ControlledExpansionPanels'
 
 const styles = theme => ({
   root: {
@@ -28,8 +32,7 @@ const styles = theme => ({
 
 class Index extends React.Component {
   state = {
-    open: false,
-    accounts: [{ name: 'lol' }]
+    open: false
   };
 
   componentWillMount(){
@@ -72,18 +75,21 @@ class Index extends React.Component {
             </Button>
           </DialogActions>
         </Dialog>
-        <Typography variant="h4" gutterBottom>
-          Ethereum Dapp try
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          This project aim to use the net and fetch some data from Ethereum Blockchain.
-        </Typography>
-        {
-          !isEmpty(this.state.accounts) ?
-            <Typography variant="subtitle1" gutterBottom>
-              Accounts {this.state.accounts[0].name}
-            </Typography> : 'No accounts found on network, check the console'
-        }
+        <Basic>
+          <Typography variant="h4" gutterBottom>
+            Ethereum Dapp try
+          </Typography>
+          <Typography variant="subtitle1" gutterBottom>
+            This project aim to use the net and fetch some data from Ethereum Blockchain.
+          </Typography>
+          {
+            !isEmpty(this.state.accounts) ?
+              <Typography variant="subtitle1" gutterBottom>
+                Accounts {this.state.accounts[0].name}
+              </Typography> : 'No accounts found on network, check the console'
+          }
+          <Panels />
+        </Basic>
         {/* <Typography gutterBottom>
           <Link href="/about">
             <a>About the project</a>
