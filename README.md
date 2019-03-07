@@ -13,4 +13,5 @@ With this repository i'm aiming to understand how to interact with the ethereum 
 > Because I have some troubles using `npx create-react-app` I'm switching to Nextjs.
 - [Metamask Chrome extension - must be installed](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn/related)
 - [Material-ui](https://material-ui.com)
+- [Material-ui, Nextjs implementation](https://github.com/mui-org/material-ui/tree/master/examples/nextjs)
 - [Web3js documentation](https://web3js.readthedocs.io/en/1.0/getting-started.html)
