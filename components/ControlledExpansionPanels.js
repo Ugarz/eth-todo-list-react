@@ -34,7 +34,7 @@ class ControlledExpansionPanels extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, accounts } = this.props;
     const { expanded } = this.state;
 
     return (
@@ -97,6 +97,7 @@ class ControlledExpansionPanels extends React.Component {
 
 ControlledExpansionPanels.propTypes = {
   classes: PropTypes.object.isRequired,
+  accounts: PropTypes.array,
 };
 
 export default withStyles(styles)(ControlledExpansionPanels);
