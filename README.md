@@ -15,3 +15,4 @@ With this repository i'm aiming to understand how to interact with the ethereum 
 - [Material-ui](https://material-ui.com)
 - [Material-ui, Nextjs implementation](https://github.com/mui-org/material-ui/tree/master/examples/nextjs)
 - [Web3js documentation](https://web3js.readthedocs.io/en/1.0/getting-started.html)
+- [Deploy Nextjs app with Now](https://zeit.co/guides/deploying-nextjs-with-now/)
