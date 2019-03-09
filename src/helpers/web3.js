@@ -3,7 +3,7 @@ import isEmpty from 'lodash/isEmpty';
 import Web3 from 'web3';
 
 const initialize = (client) => new Promise (async (resolve, reject) => {
-    if(!isEmpty(client)) return resovle(client);
+    if(!isEmpty(client)) return resolve(client);
     try {
         const client = new Web3(Web3.givenProvider || "ws://localhost:8546");
         const network = await client.eth.net.getNetworkType()
