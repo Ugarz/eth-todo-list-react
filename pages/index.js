@@ -32,16 +32,22 @@ const styles = theme => ({
 
 class Index extends React.Component {
   state = {
-    open: false
+    open: false,
+    accounts: [{
+      name: "Developer Account",
+      balance: 100,
+      currency: "ETH"
+    }]
   };
 
   componentWillMount(){
     return web3.initialize().then(client => {
       console.log('client', client)
       // Update the state with accounts fetched from ETH network
-      this.setState({
-        accounts: client.accounts
-      })
+      // FIXME: 
+      // this.setState({
+      //   accounts: client.accounts
+      // })
     })
   }
 
@@ -76,28 +82,20 @@ class Index extends React.Component {
           </DialogActions>
         </Dialog>
         <Basic>
-          <Typography variant="h4" gutterBottom>
-            Ethereum Dapp try
-          </Typography>
-          <Typography variant="subtitle1" gutterBottom>
-            This project aim to use the net and fetch some data from Ethereum Blockchain.
-          </Typography>
-          {
-            !isEmpty(this.state.accounts) ?
-              <Typography variant="subtitle1" gutterBottom>
-                Accounts {this.state.accounts[0].name}
-              </Typography> : 'No accounts found on network, check the console'
-          }
-          <Panels />
+            <Typography variant="h4" gutterBottom>
+              Ethereum Dapp try
+            </Typography>
+            <Typography variant="subtitle1" gutterBottom>
+              This project aim to use the net and fetch some data from Ethereum Blockchain.
+            </Typography>
+            {
+              !isEmpty(this.state.accounts) ?
+                <Panels accounts={this.state.accounts} /> : <Typography variant="subtitle1" gutterBottom> No accounts found </Typography>
+            }
+          {/* <Button variant="contained" color="secondary" onClick={this.handleClick}>
+            Fetch data
+          </Button> */}
         </Basic>
-        {/* <Typography gutterBottom>
-          <Link href="/about">
-            <a>About the project</a>
-          </Link>
-        </Typography>
-        <Button variant="contained" color="secondary" onClick={this.handleClick}>
-          Fetch data
-        </Button> */}
       </div>
     );
   }
