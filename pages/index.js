@@ -92,9 +92,9 @@ class Index extends React.Component {
               !isEmpty(this.state.accounts) ?
                 <Panels accounts={this.state.accounts} /> : <Typography variant="subtitle1" gutterBottom> No accounts found </Typography>
             }
-          {/* <Button variant="contained" color="secondary" onClick={this.handleClick}>
+          <Button variant="contained" color="secondary" onClick={this.handleClick}>
             Fetch data
-          </Button> */}
+          </Button>
         </Basic>
       </div>
     );
