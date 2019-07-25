@@ -1,6 +1,5 @@
 {
   "name": "eth-todo-list-react",
-  "alias": ["eth-todo-list-react.now.sh"],
   "version": 2,
   "scope": "ugo-arzur",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
