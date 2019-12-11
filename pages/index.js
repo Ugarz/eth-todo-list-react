@@ -42,8 +42,8 @@ class Index extends React.Component {
 
   componentWillMount(){
     return web3.initialize().then(client => {
-      console.log('client', client)
-      // Update the state with accounts fetched from ETH network
+      console.log('client accounts', client.accounts)
+      // Update the state with accounts fxetched from ETH network
       // FIXME: 
       // this.setState({
       //   accounts: client.accounts
